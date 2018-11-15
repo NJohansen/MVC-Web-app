@@ -1,0 +1,21 @@
+@model IEnumerable<Assignment.Models.Profile>
+
+@{
+    ViewData["Title"] = "Welcome!";
+}
+<div class="image-class">
+    <img src="https://avatars2.githubusercontent.com/u/32328015?s=460&v=4" width="180px" alt="ASP.NET" class="img-responsive" />
+</div>
+
+@* Fast fix for getting data from db *@
+@foreach (var item in Model)
+{
+    <h3>Hello there!</h3>
+    <h4>My name is @Html.DisplayFor(modelItem => item.Name)</h4>
+    <h3>My work experience</h3>
+    <h4>@Html.DisplayFor(modelItem => item.Description)</h4>
+    <h3>Programming languages I use</h3>
+    <h4>@Html.DisplayFor(modelItem => item.ProgrammingLanguage)</h4>
+    <h3>Brief resume/CV</h3>
+    <h4>@Html.DisplayFor(modelItem => item.Resume)</h4>
+}

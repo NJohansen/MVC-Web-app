@@ -1,0 +1,33 @@
+@model IEnumerable<Assignment.Models.ProgrammingLanguage>
+
+@{
+    ViewData["Title"] = "Programming Languages";
+}
+
+<h2>Programming languages</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experience)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experience)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
